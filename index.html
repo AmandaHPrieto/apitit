@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TheMealDB</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+
+    <script src="assets/libraries/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="container-header column">
+                <div class="container-logo column">
+                    <img class="logo" src="assets/images/bon-apitit-logo.svg" alt="logo">
+                    <h1>What's cooking, good looking?</h1>
+                </div>
+                <div class="container-form row">
+                    <div>
+                        <img class="img-form" src="assets/images/icone-form.png" alt="logo">
+                    </div>
+
+                    <form id="form" class="row">
+                        <div class="column">
+                            <label for="ingredient">Pick your ingredient</label>
+                            <select id="ingredient" name="listeIngredients">
+                                <option class="ingredient" value="0" selected="selected">Pick your ingredient !
+                                </option>
+                            </select>
+                            <span class="message-erreur"></span>
+                        </div>
+                        <input class="button" type="submit" value="Get Meals">
+                    </form>
+
+                </div>
+            </div>
+        </header>
+
+
+
+        <!-- Section recherche -->
+        <section class="recherche">
+
+        </section><!-- eof .recherche -->
+
+        <!-- Section résultats -->
+        <section class="resultats wide75rem">
+
+            <div class="results-container">
+                <ul id="liste-recettes">
+
+                </ul>
+                <img id="range-image" class="hidden" />
+            </div>
+
+            <div class="popup-container">
+                <div class="content column">
+                    <div class="bg">
+                        <div class="center-text">
+                            <h2 class="titre"></h2>
+                            <span class="pays"></span>
+                            <span class="categorie"></span>
+                        </div>
+
+                        <div class="row container-img-ingredients">
+                            <div class="div-thumbnail">
+                                <img class="thumbnail" src="">
+
+                            </div>
+                            <div class="div-ingredients">
+                                <h3>🌶️ Ingredients</h3>
+                                <ul class="recette-ingredients column nowrap">
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>🗒️ Recipe</h3>
+                            <p class="instructions"></p>
+                        </div>
+                    </div>
+                </div><!-- eof .content -->
+            </div><!-- eof popup-container -->
+        </section><!-- eof .resultats -->
+
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+
+
+</html>

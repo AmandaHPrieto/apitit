@@ -1,0 +1,383 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Communs */
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: #110602;
+  line-height: 1.8rem;
+  margin: 5rem auto;
+  justify-content: center;
+}
+
+html {
+  background-image: url("/assets/images/fond.png");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+img {
+  border-radius: 2%;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #f15a26;
+}
+
+a:hover {
+  color: #f99d21;
+}
+
+li {
+  list-style: none;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+h2 {
+  font-family: 'Spicy Rice', serif;
+  font-size: 2.5rem;
+  letter-spacing: .2rem;
+  padding: 1rem 0 1.5rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  max-height: 20rem;
+  height: 20rem;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+img.logo {
+  max-height: 10rem;
+}
+
+.container-logo {
+  max-width: 100%;
+  flex: 0 0 30%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #f99d21;
+  font-family: 'Spicy Rice', serif;
+  letter-spacing: .2rem;
+}
+
+img.img-form {
+  min-width: 6rem;
+  width: 6rem;
+  height: auto;
+  align-self: center;
+}
+
+/* Sélection ingrédient */
+
+#form {
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.container-form {
+  padding: 3rem;
+}
+
+label {
+  visibility: hidden;
+}
+
+#ingredient {
+  padding: .9rem;
+  border-radius: .5rem;
+  border-color: #fdefe3;
+  font-size: 1.5rem;
+  font-family: 'Manrope', sans-serif;
+  background-color: #fdefe3;
+  cursor: pointer;
+  box-shadow: -1px 1px 10px 1px rgba(206, 205, 205, 0.863);
+}
+
+.button {
+  max-width: 50%;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  border: none;
+  font-family: 'Manrope', sans-serif;
+  color: #fdefe3;
+  background-color: #f15a26;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.message-erreur {
+  font-family: 'Manrope', sans-serif;
+  color: #f15a26;
+}
+
+/* Résultats recherche */
+
+.results-container {
+  width: 75rem;
+  margin: auto;
+}
+
+#liste-recettes li:hover {
+  scale: 1.05;
+  transition: all .3s;
+}
+
+#liste-recettes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.recette {
+  flex: 30% 0 0;
+  margin: .5rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+/* Popup */
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(5px);
+  display: none;
+}
+
+.bg {
+  background-color: #ffffff;
+  padding: 2rem;
+  overflow: auto;
+}
+
+.recette-ingredients {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Résultats recherche */
+
+#liste-recettes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.recette {
+  padding: 2rem;
+  box-shadow: -1px 1px 12px 1px rgba(0, 0, 0, 0.137);
+}
+
+.resultats {
+  margin-bottom: 5rem;
+}
+
+/* Popup */
+
+.content {
+  position: relative;
+  margin: 1rem auto;
+  max-width: 80vw;
+  max-height: 95vh;
+  padding: 2rem;
+  z-index: 100;
+  box-shadow: -1px 1px 12px 1px rgba(0, 0, 0, 0.486);
+  border-radius: 10px;
+  /* Source : https://www.magicpattern.design/tools/css-backgrounds */
+  background-image: repeating-linear-gradient(45deg, #f15a26 25%, transparent 25%, transparent 75%, #f15a26 75%, #f15a26), repeating-linear-gradient(45deg, #f15a26 25%, #fdefe3 25%, #fdefe3 75%, #f15a26 75%, #f15a26);
+  background-position: 0 0, 16px 16px;
+  background-size: 32px 32px;
+}
+
+.thumbnail {
+  max-width: 100%;
+  box-shadow: -1px 1px 12px 1px rgba(0, 0, 0, 0.199);
+  border-radius: 20rem;
+}
+
+.recette-ingredients {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 40% 0 0;
+}
+
+.recette-ingredients li {
+  margin: .5rem;
+  padding: .5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: inline-block;
+  box-shadow: -1px 1px 12px 1px rgba(0, 0, 0, 0.096);
+  border-radius: 2rem;
+  background-color: #ffffff;
+}
+
+.container-img-ingredients {
+  border: none;
+  border-radius: 2rem;
+  background-color: #fdefe3;
+  justify-content: space-between;
+  list-style: circle;
+  padding: 1rem;
+  margin: 2rem 0 2rem 0;
+  box-shadow: -1px 1px 12px 1px rgba(0, 0, 0, 0.137);
+}
+
+.div-thumbnail {
+  max-width: 40%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.div-ingredients {
+  padding-left: 1rem;
+  max-width: 50%;
+}
+
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2rem;
+  padding: .5rem 1.5rem .5rem 1.5rem;
+  box-shadow: -1px 1px 12px 1px rgba(0, 0, 0, 0.096);
+  border-radius: 2rem;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.logo-yt {
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* Tags */
+
+.pays,
+.categorie {
+  font-style: italic;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.instructions {
+  padding: 1rem;
+}
+
+
+/* Media queries
+**************************************************
+**************************************************/
+
+@media all and (max-width: 75rem) {
+
+  /* Communs */
+  .wide75rem {
+    width: 100%;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* header */
+  .container-header {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 2rem;
+  }
+
+  .button {
+    margin: 2rem;
+  }
+
+
+  /* Résultats recherche */
+
+  .results-container {
+    width: 90vw;
+  }
+
+  /* Popup */
+  .container-img-ingredients {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .div-thumbnail {
+    max-width: 100%;
+  }
+
+  .div-ingredients {
+    max-width: 100%;
+  }
+
+  .div-ingredients h3 {
+    text-align: center;
+  }
+
+  .recette-ingredients {
+    justify-content: space-around;
+  }
+}
